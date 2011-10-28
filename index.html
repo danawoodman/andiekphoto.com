@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        
+        <title>Andie Kolbeck Photography | </title>
+        
+        <!-- META tags -->
+        <meta name="description" content="Professional phtographer from Northern California." />
+        <meta name="keywords" content="photography, photos, portraits, northern california, santa rosa, sebastopol, sonoma, local, weddings" />
+        
+        <!-- Stylesheets -->
+        <link type="text/css" rel="stylesheet" href="media/css/master.css" media="all" />
+        
+        <!-- JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script type="text/javascript" src="media/js/jquery.flickr_gallery.js"></script>
+        
+        
+        <script type="text/javascript">
+        
+            $(function() {
+                
+                $('#gallery').flickr_gallery({
+                    set_id: '72157627770061592', 
+                    api_key: '59d89d16005e85c7baab8fbdb3e612e0'
+                });
+                
+            });
+        
+        </script>
+    
+    </head>
+    <body>
+    
+        <div id="container">
+            
+            <header id="header">
+                <a href="/" title="Go to the home page">                
+                    <h1>Andie Kolbeck</h1>
+                    <h2>Photography</h2>
+                </a>
+            </header>
+            
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html" title="See my work" class="active">Work</a></li>
+                    <li><a href="about.html" title="Learn more about me">About</a></li>
+                </ul>
+            </nav>
+            
+            <div id="content">
+                
+                <div id="gallery"></div>
+                
+            </div>
+            
+            <footer id="footer">
+                <p>Copyright Andie Kolbeck &copy; 2011. All Rights Reserved.</p>
+            </footer>
+            
+        </div>
+    
+    </body>
+</html>

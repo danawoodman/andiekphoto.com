@@ -1,0 +1,114 @@
+
+// Imports
+@import 'reset';
+@import '_jquery.flickr_gallery';
+
+// Site styles
+
+body {
+    background: #000 url('../img/page-bg.png');
+    color: #ddd;
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+a {
+    color: #DCDCDC;
+}
+
+h1 {
+    color: #eee;
+    font-size: 35px;
+    margin: 20px 0 15px 0;
+}
+
+p {
+    line-height: 1.5em;
+    margin: 1em 0;
+}
+
+#container {
+    margin: 30px auto;
+    text-align: left;
+    width: 640px;
+    
+    #header {
+        a {
+            background: url('../img/logo.png') no-repeat;
+            float: left;
+            height: 100px;
+            width: 350px;
+
+            h1, h2 {
+                display: none;
+            }
+        }    
+    }
+    
+    #menu {
+
+        ul {
+            float: right;
+            list-style: none;
+            margin: 30px 0 0 0;
+            padding: 0;
+
+            li {
+                float: left;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+        
+                a {
+                    color: #999;
+                    display: block;
+                    float: left;
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin: 0;
+                    padding: .4em 1.2em;
+                    text-decoration: none;
+                }
+                
+                a.active {
+                    border-bottom: 3px solid #eee;
+                    color: #eee;
+                }
+                
+                a:hover {
+                    color: #eee;
+                }
+            }
+        
+            
+        }
+        
+        &:after {
+            clear: both;
+            content: '&nbsp;';
+            display: block;
+            font-size: 0;
+            line-height: 0;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+    }
+    
+    #content {
+        border-top: 1px dashed #252525;
+        margin: 20px 0;
+        padding: 20px 0;
+    }
+
+    #footer {
+        border-top: 1px dashed #252525;
+        clear: both;
+        color: #5D5D5D;
+        font-size: 12px;
+        margin-top: 20px;
+        padding-top: 20px;
+        text-align: center;
+    }
+}
+

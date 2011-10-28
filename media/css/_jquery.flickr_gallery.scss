@@ -1,0 +1,194 @@
+
+// Sizes to set slideshow to, based on the size of the requested Photo size.
+$fg-tiny-size: 75px !default;
+$fg-thumb-size: 100px !default;
+$fg-small-size: 240px !default;
+$fg-medium-size: 640px !default;
+$fg-large-size: 1024px !default;
+$fg-original-size: 2048px !default; // We can't actually know the original size here, so we need to guess...
+
+.fg-gallery {
+    margin: 0 auto;
+    position: relative;
+    
+    &.tiny {
+        width: $fg-tiny-size;
+    
+        .fg-photos {
+            height: $fg-tiny-size;
+            width: $fg-tiny-size;
+        }
+        
+        .fg-controls .fg-next, .fg-controls .fg-prev {
+            height: $fg-tiny-size;
+        }
+    }
+    
+    &.thumb {
+        width: $fg-thumb-size;
+        
+        .fg-photos {
+            height: $fg-thumb-size;
+            width: $fg-thumb-size;
+        }
+        
+        .fg-controls .fg-next, .fg-controls .fg-prev {
+            height: $fg-thumb-size;
+        }
+    }
+    
+    &.small {
+        width: $fg-small-size;
+        
+        .fg-photos {
+            height: $fg-small-size;
+            width: $fg-small-size;
+        }
+        
+        .fg-controls .fg-next, .fg-controls .fg-prev {
+            height: $fg-small-size;
+        }
+    }
+    
+    &.medium {
+        width: $fg-medium-size;
+    
+        .fg-photos {
+            height: $fg-medium-size;
+            width: $fg-medium-size;
+        }
+        
+        .fg-controls .fg-next, .fg-controls .fg-prev {
+            height: $fg-medium-size;
+        }
+    }
+    
+    &.large {
+        width: $fg-large-size;
+        
+        .fg-photos {
+            height: $fg-large-size;
+            width: $fg-large-size;
+        }
+        
+        .fg-controls .fg-next, .fg-controls .fg-prev {
+            height: $fg-large-size;
+        }
+    }
+    
+    &.original {
+        width: $fg-original-size;
+    
+        .fg-photos {
+            height: $fg-original-size;
+            width: $fg-original-size;
+        }
+        
+        .fg-controls .fg-next, .fg-controls .fg-prev {
+            height: $fg-original-size;
+        }
+    }
+    
+    .fg-photos {
+        //left: 0;
+        //line-height: 1em;
+        //display: table-cell;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        //text-align: center;
+        //vertical-align: middle;
+        //top: 0;
+        //width: 100%;
+        
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        
+        
+        li {
+            margin: 0;
+            padding: 0;
+            //position: relative;
+            //text-align: center;
+            //vertical-align: middle;
+            //z-index: 1;
+            
+            position: relative;
+            margin: auto;
+            vertical-align: middle;
+            
+            img {
+                
+            }
+            
+            .fg-info {
+                background: rgba(0, 0, 0, 0.3);
+                bottom: 0;
+                color: #fff;
+                font-style: italic;
+                left: 0;
+                padding: 10px 30px;
+                position: absolute;
+                width: 100%;
+                z-index: 1000;
+            }
+        }
+    }
+    
+    .fg-controls {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        
+        .fg-next, .fg-prev {
+            display: block;
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: 50%;
+            
+            span {
+                display: none;
+            }
+        }
+        
+        .fg-next {
+            text-align: right;
+        }
+        
+        .fg-prev:hover {
+            background: url('../img/fg-prev-button.png') no-repeat 30% center;
+        }
+        .fg-next:hover {
+            background: url('../img/fg-next-button.png') no-repeat 70% center;
+        }
+    }
+
+    .fg-thumbs {
+        list-style: none;
+        margin: 0;
+        overflow: auto;
+        padding: 0;
+        width: 100%;
+        
+            li {
+                float: left;
+                line-height: 1em;
+                margin: 0;
+                padding: 4px;
+                
+                &.fg-active {
+                    background: #fff;
+                }
+                
+                img {
+                    float: left;
+                }
+            }
+        
+    }
+    
+}
