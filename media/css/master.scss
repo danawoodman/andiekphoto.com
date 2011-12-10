@@ -1,4 +1,20 @@
 
+// Variables
+$font-color: #888;
+$link-color: #aaa;
+$hover-color: #94C92E;
+$bg-color: #000;
+
+// Mixins
+@mixin box-shadow($color: #000, $horiz-offset: 0, $vert-offset: 0, $blur: 5px, $spread: 0, $inset: outset) {
+    -khtml-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
+    -moz-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
+    -ms-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
+    -o-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
+    -webkit-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
+    box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
+}
+
 // Imports
 @import 'reset';
 @import '_jquery.flickr_gallery';
@@ -6,25 +22,25 @@
 // Site styles
 
 body {
-    background: #000 url('../img/page-bg.png');
-    color: #bbb;
+    background: $bg-color url('../img/page-bg.png');
+    color: $font-color;
     font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
 }
 
 a {
-    color: #DCDCDC;
+    color: $link-color;
     font-weight: bold;
     
     &:hover {
-        color: #94C92E;
+        color: $hover-color;
         text-decoration: none;
     }
 }
 
 h1 {
     color: #eee;
-    font-family: 'Francois One', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 35px;
     font-weight: 400;
     margin: 20px 0 15px 0;
@@ -104,13 +120,23 @@ p {
     }
     
     #content {
-        border-top: 1px dashed #252525;
         margin: 20px 0;
         padding: 20px 0;
+        
+        // About page
+        .about & {
+            @include box-shadow($color: #fff);
+            
+            background: lighten($bg-color, 15%);
+            padding: 20px 40px;
+            
+            h1 {
+                margin-top: 5px;
+            }
+        }
     }
 
     #footer {
-        border-top: 1px dashed #252525;
         clear: both;
         color: #5D5D5D;
         font-size: 14px;
