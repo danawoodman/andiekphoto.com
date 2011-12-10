@@ -6,14 +6,14 @@ $hover-color: #94C92E;
 $bg-color: #000;
 
 // Mixins
-@mixin box-shadow($color: #000, $horiz-offset: 0, $vert-offset: 0, $blur: 5px, $spread: 0, $inset: outset) {
-    -khtml-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
-    -moz-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
-    -ms-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
-    -o-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
-    -webkit-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
-    box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
-}
+// @mixin box-shadow($color: #000, $horiz-offset: 0, $vert-offset: 0, $blur: 5px, $spread: 0, $inset: outset) {
+//     -khtml-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
+//     -moz-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
+//     -ms-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
+//     -o-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
+//     -webkit-box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
+//     box-shadow: $horiz-offset $vert-offset $blur $spread $color $inset;
+// }
 
 // Imports
 @import 'reset';
@@ -125,8 +125,6 @@ p {
         
         // About page
         .about & {
-            @include box-shadow($color: #fff);
-            
             background: lighten($bg-color, 15%);
             padding: 20px 40px;
             
